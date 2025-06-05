@@ -18,3 +18,6 @@ RUN which gunicorn && ls -l $(which gunicorn)
 COPY . /app/
 
 COPY .env .
+
+RUN which gunicorn
+
