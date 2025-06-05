@@ -3,8 +3,8 @@ services:
     web:
         image: server
         container_name: web
-        # command: bash -c "gunicorn modelproject.wsgi:application -b 0.0.0.0:8000" # 서버 실행
-        command: /usr/local/bin/gunicorn modelproject.wsgi:application -b 0.0.0.0:8000
+        command: bash -c "gunicorn modelproject.wsgi:application -b 0.0.0.0:8000" # 서버 실행
+        # command: /usr/local/bin/gunicorn modelproject.wsgi:application -b 0.0.0.0:8000
         ports:
             - '8000:8000'
         restart: always
