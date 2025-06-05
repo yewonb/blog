@@ -6,9 +6,13 @@ RUN apt-get -y update
 RUN apt-get -y install vim
 
 RUN mkdir /app
-ADD . /app
 WORKDIR /app
+
+COPY requirements.txt /app/
 
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
+
+COPY . /app/
+
 COPY .env .
