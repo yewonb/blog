@@ -11,7 +11,7 @@ WORKDIR /app
 COPY requirements.txt /app/
 
 RUN pip install --upgrade pip
-RUN pip install -r requirements.
+RUN pip install -r requirements.txt
 
 RUN which gunicorn && ls -l $(which gunicorn)
 
