@@ -24,6 +24,8 @@ services:
             - ./media:/media
             - ./cert/certbot/conf:/etc/letsencrypt
             - ./cert/certbot/www:/var/www/certbot
+            - ./cert/cerbot/conf/optinos-ssl-nginx.conf:/ets/letsencrypt/options-ssl-nginx.conf
+            - ./cert/cerbot/conf/ssl-dhparams.pem:/ets/letsencrypt/ssl-dhparams.pem
         restart: always
         ports:
             - 80:80
